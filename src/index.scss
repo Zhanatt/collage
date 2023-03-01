@@ -1,0 +1,241 @@
+// ======== MAIN STYLE AND VARIABLES
+body{
+  color: black;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+}
+.container{
+  max-width: 1240px;
+  margin: 0 auto;
+}
+// ======== HEADER
+.header{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../public/images/header-bg.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__top{
+    background-color: rgba(255,255,255,0.2);
+    padding: 40px 20px 30px 20px;
+    position:fixed;
+    width: 100%;
+    top: 0;
+    font-size: 16px;
+    &-color{
+      background-color: gray;
+    }
+    &-inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo{
+    display: flex;
+    column-gap: 10px;
+    p{
+      width: 95px;
+    }
+  }
+  &__nav{
+    display: flex;
+    text-transform: uppercase;
+    li > a{
+      transition: all 200ms ease-in-out;
+      &:hover{
+        color: white;
+        cursor: pointer;
+
+      }
+    }
+    li:not(:last-child){
+      padding-right: 70px;
+    }
+  }
+  &__main{
+    text-align: center;
+    color: white;
+  }
+  &__title{
+    max-width: 800px;
+    font-size: 48px;
+    font-weight: 600;
+  }
+  &__subtitle{
+    max-width: 493px;
+    margin: 0 auto;
+    padding: 30px 0 50px;
+  }
+  &__button{
+    padding: 15px 30px;
+    background-color: #1F63F1;
+    font-size: 16px;
+    color: white;
+    border: none;
+    &:hover{
+      background-color:#1a53ce;
+    }
+  }
+}
+// ======== NEWS
+.news{
+  padding: 40px 0;
+  &__inner{
+    display: flex;
+    column-gap: 127px;
+    padding: 0 20px;
+  }
+  &__title{
+    padding-bottom: 26px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    padding-bottom: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    &:not(:first-child){
+      margin-top: 22px;
+    }
+    &-date{
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.5);
+      align-self: flex-end;
+    }
+  }
+  &__content{
+    max-width: 505px;
+  }
+  &__image{
+    background: url(../public/images/news-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 503px;
+    display: flex;
+    align-items: end;
+  }
+  &__imageContent{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 16px 10px 10px 16px;
+    display: flex;
+    flex-direction: column;
+    &-title{
+      font-size: 16px;
+    }
+    &-text{
+      font-size: 12px;
+      padding: 16px 0 13px;
+    }
+    &-date{
+      font-size: 10px;
+      align-self: flex-end;
+    }
+  }
+}
+.aboutUs{
+  padding-top: 134.5px;
+  &__inner>p{
+    max-width: 796px;
+    padding-top: 100px;
+  }
+  &__boxContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child){
+      padding-bottom: 60px;
+    }
+    &-text{
+      max-width: 806px;
+      padding-right: 22px;
+
+      h3{
+        padding-bottom: 34px;
+        font-weight: 400;
+      }
+    }
+    img{
+      width: 411px;
+    }
+  }
+  &__boxContent:nth-child(2){
+    .aboutUs__boxContent-text{
+      order: 1;
+      padding-right: 0;
+      padding-left: 22px;
+    }
+  }
+}
+.universitySubjects{
+  height: 100vh;
+  background: url(../public/images/universitySubjects-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__inner{
+    display: flex;
+    column-gap: 20px;
+  }
+  &__item, &__card{
+    width: 400px;
+    background: #1F63F1;
+    color: white;
+  }
+  &__card{
+    &-content{
+      padding: 0 30px 20px 30px;
+      min-height: 100px; 
+      width: 100%; 
+      background: #1F63F1;
+      position: relative;
+      }
+      &-content:before {
+      content: "";
+      height: 0; 
+      width: 0;
+      position: absolute; 
+      left: 0; 
+      top: -23px;
+      border-bottom: 23px solid #1F63F1;
+      border-left: 205px solid transparent;
+      border-right: 195px solid transparent;
+      }
+    h3{
+      padding: 12px 0 20px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 500;
+    }
+    img{
+      width: 100%;
+    }
+  }
+  &__item{
+    padding: 20px 0px 20px 5px;
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+    &::before{
+      content: url('../public/images/universitySubjects__item-icon.svg');
+      display: block;
+      padding-right: 10px;
+    }
+  }
+}
